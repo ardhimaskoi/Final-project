@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "320817346060",
+    "project_id": "hidayah-app-c646a",
+    "storage_bucket": "hidayah-app-c646a.firebasestorage.app"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:320817346060:android:e1221b6e7276feabb6e029",
+        "android_client_info": {
+          "package_name": "com.example.hidayahapp"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyD4tmjcxdtsB28IA0wu1vzHqiqhrrU_Pns"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

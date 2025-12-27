@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="file:///Users/ardhimas/Library/Android/sdk/sources/android-35/audio_policy_configuration_V7_0.xsd">
+    <item
+        android:id="@+id/beranda"
+        android:icon="@drawable/beranda"
+        android:title="Beranda"
+
+        />
+    <item
+        android:id="@+id/pengajian"
+        android:icon="@drawable/pengajian"
+        android:title="Kajian" />
+
+    <item
+        android:id="@+id/dakwah"
+        android:icon="@drawable/dakwah"
+
+        android:title="Dakwah" />
+    <item
+        android:id="@+id/artikel"
+        android:icon="@drawable/artikel"
+        android:background="@color/white"
+        android:title="Artikel" />
+</menu>

@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<vector xmlns:android="http://schemas.android.com/apk/res/android"
+    android:width="32dp"
+    android:height="32dp"
+    android:viewportWidth="32"
+    android:viewportHeight="32">
+
+    <!-- Kepala besar -->
+    <path
+        android:fillColor="#000000"
+        android:pathData="M16,4a5,5 0 1,1 0,10a5,5 0 0,1 0,-10z" />
+
+    <!-- Badan agak ke bawah -->
+    <path
+        android:fillColor="#000000"
+        android:pathData="M8,16c-1.5,0 -2.5,2 -2.5,4.5v2.5c0,0.7 0.6,1.5 1.5,1.5h18c0.9,0 1.5,-0.8 1.5,-1.5v-2.5c0,-2.5 -1,-4.5 -2.5,-4.5h-16z" />
+
+    <!-- Mimbar dengan jarak dari badan -->
+    <path
+        android:fillColor="#000000"
+        android:pathData="M5,26h22v3h-22z" />
+</vector>

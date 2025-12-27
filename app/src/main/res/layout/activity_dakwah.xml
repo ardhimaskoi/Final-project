@@ -1,0 +1,153 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#F2F4F3"
+    android:padding="24dp"
+    android:fillViewport="true"
+    tools:context=".DakwahActivity">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:gravity="center">
+
+        <!-- Hero Title -->
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="🕋 Tambah Dakwah"
+            android:textSize="24sp"
+            android:textColor="#1B5E20"
+            android:textStyle="bold"
+            android:layout_marginBottom="4dp"
+            android:fontFamily="sans-serif-medium" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="“Sampaikan dariku walau hanya satu ayat.”"
+            android:textSize="14sp"
+            android:textColor="#888888"
+            android:layout_marginBottom="24dp"
+            android:fontFamily="cursive" />
+
+        <!-- Input Card -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:background="@drawable/edittext_background"
+            android:padding="20dp"
+            android:layout_marginBottom="24dp">
+
+            <!-- Judul -->
+            <EditText
+                android:id="@+id/editTextJudul"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="📌 Judul Dakwah"
+                android:textColor="#000000"
+                android:textColorHint="#AAAAAA"
+                android:background="@android:color/transparent"
+                android:textSize="16sp"
+                android:paddingVertical="10dp"
+                android:fontFamily="sans-serif" />
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="#DDDDDD"
+                android:layout_marginBottom="12dp" />
+
+            <!-- Deskripsi -->
+            <EditText
+                android:id="@+id/editTextDeskripsi"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="📝 Deskripsi Dakwah"
+                android:gravity="top"
+                android:minLines="4"
+                android:textColor="#000000"
+                android:textColorHint="#AAAAAA"
+                android:background="@android:color/transparent"
+                android:paddingVertical="10dp"
+                android:fontFamily="sans-serif" />
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="#DDDDDD"
+                android:layout_marginBottom="12dp"
+                android:layout_marginTop="12dp" />
+
+            <!-- URL Video -->
+            <EditText
+                android:id="@+id/editTextVideoUrl"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="🎥 URL Video Dakwah"
+                android:inputType="textUri"
+                android:textColor="#000000"
+                android:textColorHint="#AAAAAA"
+                android:background="@android:color/transparent"
+                android:paddingVertical="10dp"
+                android:fontFamily="sans-serif" />
+
+            <!-- Baris Gambar & Tombol -->
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="#DDDDDD"
+                android:layout_marginBottom="12dp"
+                android:layout_marginTop="12dp" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:gravity="center_vertical"
+                android:layout_marginTop="12dp">
+
+                <!-- Preview Gambar Bulat Kecil -->
+                <ImageView
+                    android:id="@+id/imagePreview"
+                    android:layout_width="60dp"
+                    android:layout_height="60dp"
+                    android:layout_marginEnd="16dp"
+                    android:scaleType="centerCrop"
+                    android:contentDescription="Foto Ustadz" />
+
+                <!-- Tombol Pilih Gambar -->
+                <Button
+                    android:id="@+id/btnPilihGambar"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="📷 Pilih Gambar"
+                    android:textAllCaps="false"
+                    android:textSize="14sp"
+                    android:textColor="#FFFFFF"
+                    android:backgroundTint="#388E3C"
+                    android:paddingHorizontal="16dp"
+                    android:paddingVertical="10dp"
+                    android:fontFamily="sans-serif" />
+            </LinearLayout>
+
+        </LinearLayout>
+
+        <!-- Tombol Simpan -->
+        <Button
+            android:id="@+id/btnSimpan"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="💾 Simpan Dakwah"
+            android:textAllCaps="false"
+            android:textSize="16sp"
+            android:textColor="#FFFFFF"
+            android:backgroundTint="#1A3D31"
+            android:padding="18dp"
+            android:fontFamily="sans-serif-medium" />
+    </LinearLayout>
+</ScrollView>

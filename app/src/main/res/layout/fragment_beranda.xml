@@ -1,0 +1,499 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:background="#F5F5F5"
+    tools:context=".BerandaFragment">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:padding="16dp">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+
+            >
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:gravity="center_vertical">
+
+
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_weight="1"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Sholat"
+                        android:textSize="24sp"
+                        android:textStyle="bold"
+                        android:textColor="#1A3D31"
+                        android:layout_marginTop="20dp"
+                        >
+
+                    </TextView>
+                    <TextView
+                        android:id="@+id/LokasiSholat"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Kota Yogyakarta Indonesia"
+                        android:textSize="18sp"
+                        android:layout_marginTop="5dp"
+                        android:textColor="#1A3D31"
+                        >
+
+                    </TextView>
+
+                </LinearLayout>
+
+                <ImageButton
+                    android:id="@+id/imgProfile"
+                    android:layout_width="25dp"
+                    android:layout_height="25dp"
+                    android:scaleType="centerCrop"
+                    android:src="@drawable/profile"
+                    android:contentDescription="Foto Profil"
+                    android:background="@android:color/transparent"
+                    android:layout_marginStart="12dp"
+                    />
+
+
+
+
+            </LinearLayout>
+
+
+
+
+
+            <!-- Navigasi Tanggal -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:gravity="center"
+                android:layout_marginTop="40dp">
+
+                <ImageButton
+                    android:id="@+id/buttonPrevDay"
+                    android:layout_width="48dp"
+                    android:layout_height="48dp"
+                    android:src="@drawable/baseline_arrow_back_ios_24"
+                    android:background="?attr/selectableItemBackgroundBorderless"
+                    android:contentDescription="Previous Day"/>
+
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:orientation="vertical"
+                    android:gravity="center">
+
+                    <TextView
+                        android:id="@+id/textViewTitle"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Waktu Sholat"
+                        android:textSize="20sp"
+                        android:textColor="#1A3D31"
+                        android:textStyle="bold"/>
+
+                    <TextView
+                        android:id="@+id/textViewDate"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Senin, 1 Januari 2025"
+                        android:textSize="16sp"
+                        android:textColor="#333333"
+                        android:layout_marginTop="4dp"/>
+                </LinearLayout>
+
+                <ImageButton
+                    android:id="@+id/buttonNextDay"
+                    android:layout_width="48dp"
+                    android:layout_height="48dp"
+                    android:src="@drawable/baseline_arrow_forward_ios_24"
+                    android:background="?attr/selectableItemBackgroundBorderless"
+                    android:contentDescription="Next Day"/>
+            </LinearLayout>
+
+            <!-- Daftar Waktu Shalat -->
+            <GridLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:columnCount="2"
+                android:layout_marginTop="25sp"
+                android:alignmentMode="alignMargins"
+                android:rowOrderPreserved="false"
+                android:useDefaultMargins="true"
+
+                >
+
+                <!-- Template CardView Waktu Shalat -->
+                <androidx.cardview.widget.CardView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="12dp"
+                    android:layout_columnWeight="1"
+                    android:layout_rowWeight="1"
+                    app:cardCornerRadius="12dp"
+                    app:cardElevation="4dp"
+                    app:cardBackgroundColor="#FFFFFF">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal"
+                        android:padding="16dp"
+                        android:gravity="center_vertical">
+
+                        <TextView
+                            android:id="@+id/textViewShubuh"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:text="Shubuh"
+                            android:textSize="18sp"
+                            android:textColor="#1A3D31"
+                            android:layout_weight="1"/>
+
+                        <TextView
+                            android:id="@+id/waktuViewShubuh"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="04:30"
+                            android:textSize="18sp"
+                            android:textColor="#4CAF50"/>
+                    </LinearLayout>
+                </androidx.cardview.widget.CardView>
+
+                <androidx.cardview.widget.CardView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="12dp"
+                    android:layout_columnWeight="1"
+                    android:layout_rowWeight="1"
+                    app:cardCornerRadius="12dp"
+                    app:cardElevation="4dp"
+                    app:cardBackgroundColor="#FFFFFF">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal"
+                        android:padding="16dp"
+                        android:gravity="center_vertical">
+
+                        <TextView
+                            android:id="@+id/textViewSunrise"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:text="Terbit"
+                            android:textSize="18sp"
+                            android:textColor="#1A3D31"
+                            android:layout_weight="1"/>
+
+                        <TextView
+                            android:id="@+id/waktuViewSunrise"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="04:30"
+                            android:textSize="18sp"
+                            android:textColor="#4CAF50"/>
+                    </LinearLayout>
+                </androidx.cardview.widget.CardView>
+
+
+                <androidx.cardview.widget.CardView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="12dp"
+                    android:layout_columnWeight="1"
+                    android:layout_rowWeight="1"
+                    app:cardCornerRadius="12dp"
+                    app:cardElevation="4dp"
+                    app:cardBackgroundColor="#FFFFFF">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal"
+                        android:padding="16dp"
+                        android:gravity="center_vertical">
+
+                        <TextView
+                            android:id="@+id/textViewDzuhur"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:text="Dzuhur"
+                            android:textSize="18sp"
+                            android:textColor="#1A3D31"
+                            android:layout_weight="1"/>
+
+                        <TextView
+                            android:id="@+id/waktuViewDzuhur"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="12:00"
+                            android:textSize="18sp"
+                            android:textColor="#4CAF50"/>
+                    </LinearLayout>
+                </androidx.cardview.widget.CardView>
+
+                <!-- Ashar -->
+                <androidx.cardview.widget.CardView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="12dp"
+                    android:layout_columnWeight="1"
+                    android:layout_rowWeight="1"
+                    app:cardCornerRadius="12dp"
+                    app:cardElevation="4dp"
+                    app:cardBackgroundColor="#FFFFFF">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal"
+                        android:padding="16dp"
+                        android:gravity="center_vertical">
+
+                        <TextView
+                            android:id="@+id/textViewAshar"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:text="Ashar"
+                            android:textSize="18sp"
+                            android:textColor="#1A3D31"
+                            android:layout_weight="1"/>
+
+                        <TextView
+                            android:id="@+id/waktuViewAshar"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="15:15"
+                            android:textSize="18sp"
+                            android:textColor="#4CAF50"/>
+                    </LinearLayout>
+                </androidx.cardview.widget.CardView>
+
+                <!-- Magrib -->
+                <androidx.cardview.widget.CardView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="12dp"
+                    android:layout_columnWeight="1"
+                    android:layout_rowWeight="1"
+                    app:cardCornerRadius="12dp"
+                    app:cardElevation="4dp"
+                    app:cardBackgroundColor="#FFFFFF">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal"
+                        android:padding="16dp"
+                        android:gravity="center_vertical">
+
+                        <TextView
+                            android:id="@+id/textViewMagrib"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:text="Magrib"
+                            android:textSize="18sp"
+                            android:textColor="#1A3D31"
+                            android:layout_weight="1"/>
+
+                        <TextView
+                            android:id="@+id/waktuViewMagrib"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="18:00"
+                            android:textSize="18sp"
+                            android:textColor="#4CAF50"/>
+                    </LinearLayout>
+                </androidx.cardview.widget.CardView>
+
+                <!-- Isya -->
+                <androidx.cardview.widget.CardView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="12dp"
+                    android:layout_columnWeight="1"
+                    android:layout_rowWeight="1"
+                    app:cardCornerRadius="12dp"
+                    app:cardElevation="4dp"
+                    app:cardBackgroundColor="#FFFFFF">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal"
+                        android:padding="16dp"
+                        android:gravity="center_vertical">
+
+                        <TextView
+                            android:id="@+id/textViewIsya"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:text="Isya"
+                            android:textSize="18sp"
+                            android:textColor="#1A3D31"
+                            android:layout_weight="1"/>
+
+                        <TextView
+                            android:id="@+id/waktuViewIsya"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="18.30"
+                            android:textSize="18sp"
+                            android:textColor="#4CAF50"/>
+                    </LinearLayout>
+                </androidx.cardview.widget.CardView>
+
+            </GridLayout>
+
+            <!-- Motivasi Harian -->
+            <com.google.android.material.card.MaterialCardView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="16dp"
+                app:cardCornerRadius="8dp"
+                app:cardElevation="4dp"
+                app:strokeColor="#4CAF50"
+                app:strokeWidth="1dp"
+                android:backgroundTint="#EAF6EA">
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:padding="12dp">
+
+                    <ImageView
+                        android:id="@+id/bgMotivasiDecor"
+                        android:layout_width="64dp"
+                        android:layout_height="64dp"
+                        android:layout_alignParentEnd="true"
+                        android:alpha="0.07"
+                        android:src="@drawable/motvasi"
+                        android:scaleType="centerCrop" />
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal"
+                        android:gravity="center_vertical">
+
+                        <ImageView
+                            android:layout_width="52dp"
+                            android:layout_height="52dp"
+                            android:src="@drawable/motvasi"
+                            app:tint="#388E3C"
+                            android:layout_marginEnd="16dp" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="“Jangan tinggalkan shalat, karena itu adalah kunci ketenangan hati.”"
+                            android:textSize="17sp"
+                            android:lineSpacingExtra="6dp"
+                            android:textColor="#1B5E20"
+                            android:fontFamily="sans-serif-medium" />
+                    </LinearLayout>
+                </RelativeLayout>
+            </com.google.android.material.card.MaterialCardView>
+
+            <!-- Hadist Pilihan -->
+            <com.google.android.material.card.MaterialCardView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="16dp"
+                app:cardCornerRadius="8dp"
+                app:cardElevation="4dp"
+                app:strokeColor="#4CAF50"
+                app:strokeWidth="1dp"
+                android:backgroundTint="#EAF6EA"
+                >
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:padding="12dp">
+
+                    <ImageView
+                        android:id="@+id/bgHadisDecor"
+                        android:layout_width="72dp"
+                        android:layout_height="72dp"
+                        android:layout_alignParentEnd="true"
+                        android:alpha="0.06"
+                        android:src="@drawable/hadis"
+                        android:scaleType="centerCrop"
+                        />
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginBottom="8dp"
+                            android:fontFamily="sans-serif-medium"
+                            android:text="Hadist Hari Ini"
+                            android:textColor="#F9A825"
+                            android:textSize="20sp"
+                            android:textStyle="bold" />
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:fontFamily="sans-serif"
+                            android:lineSpacingExtra="8dp"
+                            android:text="“Sesungguhnya amal yang paling dicintai oleh Allah adalah amal yang paling kontinu walaupun sedikit.” (HR. Bukhari-Muslim)"
+                            android:textColor="#4E342E"
+                            android:textSize="16sp" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="12dp"
+                            android:fontFamily="sans-serif-medium"
+                            android:text="Lihat selengkapnya →"
+                            android:textColor="#F9A825"
+                            android:textSize="15sp" />
+                    </LinearLayout>
+                </RelativeLayout>
+            </com.google.android.material.card.MaterialCardView>
+
+
+
+
+
+
+        </LinearLayout>
+
+    </ScrollView>
+    <com.google.android.material.floatingactionbutton.FloatingActionButton
+        android:id="@+id/fab"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@drawable/baseline_add_24"
+        android:layout_marginEnd="24dp"
+        android:layout_marginBottom="24dp"
+        android:layout_gravity="bottom|end"
+        app:tint="#ffff"
+        android:backgroundTint="#1A3D31"
+
+        />
+</FrameLayout>

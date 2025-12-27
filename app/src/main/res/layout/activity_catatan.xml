@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="16dp"
+        android:gravity="top|start">
+
+        <!-- Bar tombol (simpan + tambah gambar) -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:gravity="end">
+
+            <androidx.appcompat.widget.AppCompatButton
+                android:id="@+id/btn_add_image"
+                android:layout_width="35dp"
+                android:layout_height="35dp"
+                android:layout_marginEnd="8dp"
+                android:background="@drawable/baseline_add_24"
+                android:backgroundTint="#1A3D31"
+                android:contentDescription="Tambah Gambar" />
+
+            <androidx.appcompat.widget.AppCompatButton
+                android:id="@+id/btn_simpan"
+                android:layout_width="25dp"
+                android:layout_height="25dp"
+                android:background="@drawable/send"
+                android:backgroundTint="#1A3D31"
+                android:contentDescription="Simpan Catatan" />
+        </LinearLayout>
+
+        <!-- EditText untuk Judul -->
+        <EditText
+            android:id="@+id/catatanJudul"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Judul Catatan"
+            android:textSize="20sp"
+            android:textColor="#333333"
+            android:inputType="text"
+            android:gravity="top|start"
+            android:layout_marginBottom="12dp"
+            android:padding="12dp"
+            android:backgroundTint="#FFFFFF" />
+
+        <!-- EditText untuk Isi -->
+        <EditText
+            android:id="@+id/catatanIsi"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Isi Catatan"
+            android:textSize="18sp"
+            android:textColor="#333333"
+            android:inputType="textMultiLine"
+            android:gravity="top|start"
+            android:layout_marginBottom="16dp"
+            android:padding="12dp"
+            android:maxLines="10"
+            android:scrollbars="vertical"
+            android:backgroundTint="#FFFFFF" />
+
+        <!-- Tempat menampilkan gambar-gambar yang dipilih -->
+        <LinearLayout
+            android:id="@+id/layoutGambar"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:layout_marginTop="8dp" />
+
+    </LinearLayout>
+</ScrollView>

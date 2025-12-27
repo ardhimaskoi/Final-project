@@ -1,0 +1,26 @@
+<resources xmlns:tools="http://schemas.android.com/tools">
+    <!-- Base application theme. -->
+    <style name="Base.Theme.HIDAYAHAPP" parent="Theme.Material3.DayNight.NoActionBar">
+        <!-- Customize your light theme here. -->
+        <!-- <item name="colorPrimary">@color/my_light_primary</item> -->
+    </style>
+
+    <style name="Theme.HIDAYAHAPP" parent="Base.Theme.HIDAYAHAPP" />
+
+    <style name="NoRippleBottomNav" parent="Widget.MaterialComponents.BottomNavigationView">
+        <item name="itemRippleColor">@android:color/transparent</item>
+        <item name="itemBackground">@android:color/transparent</item>
+        <item name="itemActiveIndicatorStyle">@style/BottomNavNoIndicator</item>
+
+    </style>
+
+    <!-- Menghilangkan indikator bulet aktif -->
+    <style name="BottomNavNoIndicator" parent="">
+        <item name="android:background">@android:color/transparent</item>
+        <item name="shapeAppearanceOverlay">@style/ShapeAppearanceOverlay.None</item>
+    </style>
+
+    <!-- Shape kosong untuk tidak membuat bulatan -->
+    <style name="ShapeAppearanceOverlay.None" parent="ShapeAppearance.Material3.Corner.None" />
+
+</resources>

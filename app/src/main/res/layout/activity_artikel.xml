@@ -1,0 +1,142 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#F2F4F3"
+    android:padding="24dp"
+    android:fillViewport="true">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:gravity="center">
+
+        <!-- Hero Title -->
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="🖋️ Tambah Artikel"
+            android:textSize="24sp"
+            android:textColor="#1B5E20"
+            android:textStyle="bold"
+            android:layout_marginBottom="8dp"
+            android:fontFamily="sans-serif-medium" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="“Bersama Membangun Peradaban”"
+            android:textSize="14sp"
+            android:textColor="#888888"
+            android:layout_marginBottom="24dp"
+            android:fontFamily="serif" />
+
+        <!-- Input Card -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:background="@drawable/edittext_background"
+            android:padding="20dp"
+            android:layout_marginBottom="24dp">
+
+            <EditText
+                android:id="@+id/inputJudul"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="📌 Judul Artikel"
+                android:textColor="#000000"
+                android:textColorHint="#AAAAAA"
+                android:background="@android:color/transparent"
+                android:textSize="16sp"
+                android:paddingVertical="10dp"
+                android:fontFamily="sans-serif" />
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="#DDDDDD"
+                android:layout_marginBottom="12dp" />
+
+            <EditText
+                android:id="@+id/inputDeskripsi"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="🖊️ Deskripsi Artikel"
+                android:gravity="top"
+                android:lines="6"
+                android:textColor="#000000"
+                android:textColorHint="#AAAAAA"
+                android:background="@android:color/transparent"
+                android:paddingVertical="12dp"
+                android:fontFamily="serif" />
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="#DDDDDD"
+                android:layout_marginBottom="12dp"
+                android:layout_marginTop="12dp" />
+
+            <EditText
+                android:id="@+id/inputTanggal"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="📅 Tanggal Publikasi"
+                android:focusable="false"
+                android:clickable="true"
+                android:textColor="#000000"
+                android:textColorHint="#AAAAAA"
+                android:background="@android:color/transparent"
+                android:paddingVertical="10dp"
+                android:fontFamily="serif" />
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="#DDDDDD"
+                android:layout_marginBottom="12dp"
+                android:layout_marginTop="12dp" />
+
+            <!-- Tombol Pilih Gambar -->
+            <Button
+                android:id="@+id/btnPilihGambar"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="🖼️ Pilih Gambar"
+                android:textAllCaps="false"
+                android:textSize="16sp"
+                android:textColor="#FFFFFF"
+                android:backgroundTint="#4CAF50"
+                android:fontFamily="sans-serif-medium"
+                android:padding="12dp"
+                android:layout_marginBottom="12dp" />
+
+            <!-- Pratinjau Gambar -->
+            <ImageView
+                android:id="@+id/imagePreview"
+                android:layout_width="match_parent"
+                android:layout_height="200dp"
+                android:scaleType="centerCrop"
+                android:src="@drawable/bg_gray"
+                android:layout_marginTop="8dp"
+                android:background="@drawable/bg_gray" />
+        </LinearLayout>
+
+        <!-- Tombol Simpan -->
+        <Button
+            android:id="@+id/btnSimpan"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="💾 Simpan Artikel"
+            android:textAllCaps="false"
+            android:textSize="16sp"
+            android:textColor="#FFFFFF"
+            android:backgroundTint="#1A3D31"
+            android:padding="18dp"
+            android:layout_marginTop="20dp"
+            android:fontFamily="sans-serif-medium" />
+    </LinearLayout>
+</ScrollView>

@@ -1,0 +1,98 @@
+<androidx.cardview.widget.CardView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_margin="12dp"
+    app:cardElevation="4dp"
+    app:cardCornerRadius="16dp"
+    android:foreground="?android:attr/selectableItemBackground">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="12dp">
+
+        <ImageView
+            android:id="@+id/ivThumbnail"
+            android:layout_width="match_parent"
+            android:layout_height="180dp"
+            android:scaleType="centerCrop"
+            android:src="@drawable/dakwah1"
+            android:contentDescription="Thumbnail video dakwah" />
+
+        <TextView
+            android:id="@+id/tvJudul"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="12dp"
+            android:text="Judul Video Dakwah"
+            android:textStyle="bold"
+            android:textSize="16sp"
+            android:textColor="#1B5E20"
+            android:maxLines="2"
+            android:ellipsize="end" />
+
+        <TextView
+            android:id="@+id/tvDeskripsi"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="4dp"
+            android:text="Deskripsi singkat isi dakwah dari Ustadz pilihan."
+            android:textSize="12sp"
+            android:textColor="#333333"
+            android:maxLines="3"
+            android:ellipsize="end" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:gravity="center_vertical"
+            android:layout_marginTop="12dp">
+
+            <!-- Gambar Ustadz -->
+            <ImageView
+                android:id="@+id/ivUstadz"
+                android:layout_width="32dp"
+                android:layout_height="32dp"
+
+                android:scaleType="centerCrop"
+                android:layout_marginEnd="8dp"
+
+                android:contentDescription="Foto Ustadz" />
+
+            <!-- Tombol Play Video -->
+            <TextView
+                android:id="@+id/tvPlayVideo"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="▶ Play Video"
+                android:textColor="#1B5E20"
+                android:textStyle="bold"
+                android:drawablePadding="8dp" />
+
+            <Space
+                android:layout_width="16dp"
+                android:layout_height="wrap_content" />
+
+            <TextView
+                android:id="@+id/btnEdit"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="✏ Edit"
+                android:textColor="#1B5E20"
+                android:paddingEnd="16dp" />
+
+            <TextView
+                android:id="@+id/btnDelete"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="🗑 Delete"
+                android:textColor="#C62828" />
+        </LinearLayout>
+
+    </LinearLayout>
+
+</androidx.cardview.widget.CardView>
